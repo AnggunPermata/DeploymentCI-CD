@@ -28,6 +28,7 @@ func hello(c echo.Context) error {
 	return c.HTML(200, "<h1>Hello world</h1><p>Halo dunia, saya bahagia</p>")
 }
 
+
 func helloName(c echo.Context) error {
 	name := c.Param("name")
 	return c.String(200, fmt.Sprintf("Hello %s", name))
