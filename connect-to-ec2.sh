@@ -1,2 +1,2 @@
 #!/bin/bash
-ssh -i ~/personal-aws.pem ubuntu@13.229.209.129
+ssh -i ~/personal-aws.pem ubuntu@13.250.33.214
