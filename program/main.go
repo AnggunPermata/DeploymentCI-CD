@@ -29,6 +29,7 @@ func hello(c echo.Context) error {
 }
 
 
+
 func helloName(c echo.Context) error {
 	name := c.Param("name")
 	return c.String(200, fmt.Sprintf("Hello %s", name))
