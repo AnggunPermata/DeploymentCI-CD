@@ -1,2 +1,2 @@
 #!/bin/bash
-ssh -i ~/asus.pem ubuntu@13.250.33.214
+ssh -i ~/ec2-ohio.pem ubuntu@18.116.90.189
