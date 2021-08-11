@@ -12,12 +12,10 @@ func main() {
 	if port == "" {
 		port = ":80"
 	}
-
 	e := echo.New()
 	e.GET("/", hello)
 	e.GET("/:name", helloName)
 	fmt.Println(port)
-
 	if err := e.Start(port); err != nil {
 		fmt.Println(err)
 	}
