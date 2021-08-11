@@ -13,8 +13,6 @@ func main() {
 		port = ":80"
 	}
 
-
-
 	e := echo.New()
 	e.GET("/", hello)
 	e.GET("/:name", helloName)
@@ -24,12 +22,9 @@ func main() {
 	}
 }
 
-
 func hello(c echo.Context) error {
 	return c.HTML(200, "<h1>Hello world</h1><p>Halo dunia, saya bahagia</p>")
 }
-
-
 
 func helloName(c echo.Context) error {
 	name := c.Param("name")
