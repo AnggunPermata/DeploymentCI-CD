@@ -31,13 +31,14 @@ func main() {
 	}
 	e := echo.New()
 	e.GET("/", hello)
-	e.GET("/:user", getOneUser)
+	// e.GET("/:user", getOneUser)
 	e.GET("/allUser", getUser)
 	e.POST("/post", postName)
 	if err := e.Start(port); err != nil {
 		fmt.Println(err)
 	}
 }
+
 
 func hello(c echo.Context) error {
 	return c.String(200, "hello gais!!")
