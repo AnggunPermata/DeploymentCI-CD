@@ -39,7 +39,6 @@ func main() {
 	}
 }
 
-
 func hello(c echo.Context) error {
 	return c.String(200, "hello gais!!")
 }
@@ -62,6 +61,7 @@ func getUser(c echo.Context) error {
 	return c.JSON(http.StatusOK, users)
 }
 
+/*
 func getOneUser(c echo.Context) error {
 	userName := c.Param("user")
 	var users User
@@ -71,3 +71,4 @@ func getOneUser(c echo.Context) error {
 	}
 	return c.JSON(http.StatusOK, users)
 }
+*/
