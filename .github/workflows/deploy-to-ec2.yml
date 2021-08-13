@@ -14,10 +14,14 @@ jobs:
         key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
         script: |
+        if [ ! -d "/home/ubuntu/app" ]
+          then
+            git clone git@github.com:AnggunPermata/DeploymentCI-CD.git /home/ubuntu/app
+          fi
           cd /home/ubuntu/app
           git pull origin main
           docker stop myApp
           docker rm myApp
           cd program
-          docker build -t anggunpermatata/helloec2:latest .
-          docker run -d -e "HTTP_PORT=:80" -e "CONNECTION_STRING=root:12345@tcp(3.141.202.167)/alta_db?charset=utf8mb4&parseTime=True&loc=Local" -p 80:80 --name myApp anggunpermatata/helloec2:latest
+          docker build -t anggunpermatata/helloagainec2:latest .
+          docker run -d -e "HTTP_PORT=:80" -e "CONNECTION_STRING=root:12345@tcp(3.141.202.167)/alta_db?charset=utf8mb4&parseTime=True&loc=Local" -p 80:80 --name myApp anggunpermatata/helloagainec2:latest
